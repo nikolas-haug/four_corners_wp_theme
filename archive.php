@@ -2,27 +2,26 @@
 
     <section class="title-section">
         <p class="welcome-text">Welcome To</p>
-        <h1>Title</h1>
-        <p class="sub-text">
-        <?php 
-            if(is_category( )) {
-                single_cat_title();
-            } else if(is_author( )) {
-                the_post();
-                echo 'Archives by Author: ' . get_the_author( );
-            } else if(is_tag( )) {
-                single_tag_title();
-            } else if(is_day(  )) {
-                echo 'Archives by Day: ' . get_the_date( );
-            } else if(is_month(  )) {
-                echo 'Archives by Month: ' . get_the_date( 'F Y' );
-            } else if(is_year(  )) {
-                echo 'Archives by Year: ' . get_the_date( 'Y' ); 
-            } else {
-                echo 'Archives';
-            }
-        ?>
-        </p>
+        <h1>
+            <?php 
+                if(is_category( )) {
+                    single_cat_title();
+                } else if(is_author( )) {
+                    the_post();
+                    echo 'Archives by Author: ' . get_the_author( );
+                } else if(is_tag( )) {
+                    single_tag_title();
+                } else if(is_day(  )) {
+                    echo 'Archives by Day: ' . get_the_date( );
+                } else if(is_month(  )) {
+                    echo 'Archives by Month: ' . get_the_date( 'F Y' );
+                } else if(is_year(  )) {
+                    echo 'Archives by Year: ' . get_the_date( 'Y' ); 
+                } else {
+                    echo 'Archives';
+                }
+            ?>
+        </h1>
     </section>
 
     <div class="grid-container">
