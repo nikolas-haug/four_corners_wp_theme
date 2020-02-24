@@ -31,7 +31,7 @@
             <span><i class="fa fa-envelope"></i> Email: something@email.com</span>
           </div>
           <div class="cell large-3">
-            <form action="">
+            <form action="<?php echo esc_url(site_url( '/' )); ?>" method="GET">
               <input type="text" name="s" placeholder="Search...">
               <button type="submit"><i class="fa fa-search"></i></button>
             </form>
@@ -44,7 +44,7 @@
       <div class="grid-container">
         <div class="grid-x">
           <div class="cell large-4">
-              <h3><a href="index.html"><?php bloginfo( 'name' ); ?></a></h3>
+              <h3><a href="<?php echo esc_url(site_url( '/' )); ?>"><?php bloginfo( 'name' ); ?></a></h3>
           </div>
           <div class="cell large-8">
             <?php wp_nav_menu( array(

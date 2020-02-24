@@ -1,14 +1,15 @@
 <?php get_header(); ?>
 
-<section class="title-section">
-      <p class="welcome-text">Welcome To</p>
-      <h1>Blog</h1>
-      <p class="sub-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse illum assumenda accusantium expedita odio ex tenetur, recusandae laboriosam sed fugiat voluptatum iusto a ducimus modi?</p>
-  </section>
+    <section class="title-section">
+        <p class="welcome-text">Welcome To</p>
+        <h1>Title</h1>
+        <p class="sub-text">
+        Search Results
+        </p>
+    </section>
 
     <div class="grid-container">
-      <?php $no_featured_query = new WP_Query(array('cat' => '-3')); ?>
-      <?php while($no_featured_query->have_posts()) : $no_featured_query->the_post(); ?>
+      <?php while(have_posts()) : the_post(); ?>
         <article class="blog-post">
           <?php if(has_post_thumbnail()) : ?>
               <div class="post-thumbnail">
